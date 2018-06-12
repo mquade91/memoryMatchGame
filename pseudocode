@@ -1,0 +1,47 @@
+Front End Developer Code Test
+
+Memory Game Test
+
+-Create a simple memory game
+-You can use whatever frameworks or open source packages you’d like.
+-The game should be delivered in a zip file that, upon unzipping, will open in the browser (chrome) and work without any additional steps. Please deliver this file via Google Drive or Dropbox, as apparently Google blocks .zip files that contain .js files.
+
+Game Requirements
+
+-Alternating turns between a red and a blue player
+  PLAYER
+  Cards clicked
+    If cardsClicked == 2 switch players
+      If match +1 to 'matches'
+      If not no change to score
+      Cannot click on card when matched (stay showing)
+
+After all Cards have been matched compare 'Blue Player's  matches' to 'Red Players matches'
+  -Must have (odd# x 2) amount of cards (e.g 7, 9, etc.)
+  -Highest # of matched +1 to 'score'
+  -Auto reset (can click new game button if want to)
+
+-Ability to start a new game
+  New Game Button/Function
+    Reset Scores
+    Shuffle cards
+     Dynamically create cards
+     -on window.addEventListener('onload')
+      -each card has unique id (id='card1' and so on)
+     Randomly place cards (Math.random())
+
+Follow Game Rules
+Mix up the cards.
+Lay them in rows, face down.
+Turn over any two cards.
+  turn over on click
+  only allow two to be turned over
+  if two match add a match to either Red player or Blue player
+
+If the two cards match, keep them.
+If they don't match, turn them back over.
+
+Remember what was on each card and where it was.
+Watch and remember during the other player's turn.
+The game is over when all the cards have been matched.
+The player with the most matches wins.

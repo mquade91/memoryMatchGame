@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Memory Match Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./style/style.css" />
+  <script src="./script/script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Memory Match Game</h1>
+    <!-- New/Reset Game Button -->
+    <button onclick="newBoard()">New Game</button>
+    <button onclick="resetScores()">Reset Scores</button>
+    <!-- Cards -->
+    <div id="gameBoard">
+      <!-- Cards Dynamically Created Here -->
+    </div>
+
+    <!-- Player Scores -->
+    <div class='scorebox'>
+
+      <!-- Red Player Scoring -->
+      <div id='red_table'>
+        <h4>Red Player</h4>
+        <p>Current Matches:
+          <span id="red_score">0</span>
+        </p>
+        <p>Total Games Won:
+          <span id="red_gamesWon">0</span>
+        </p>
+      </div>
+      <!-- Blue Player Scoring -->
+      <div id='blue_table'>
+        <h4>Blue Player</h4>
+        <p>Current Matches:
+          <span id="blue_score">0</span>
+        </p>
+        <p>Total Games Won:
+          <span id="blue_gamesWon">0</span>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <script>newBoard()</script>
+</body>
+
+
+</html>
