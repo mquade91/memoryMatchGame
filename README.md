@@ -4,4 +4,4 @@ This is a memory test game played between two players.  Red player goes first, b
 
 https://mquade91.github.io/memoryMatchGame/
 
-![MemoryGamePic][homeScreen.png]
+![MemoryGamePic](homeScreen.png)
