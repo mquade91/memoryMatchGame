@@ -26,7 +26,6 @@ After all Cards have been matched compare 'Blue Player's  matches' to 'Red Playe
     Reset Scores
     Shuffle cards
      Dynamically create cards
-     -on window.addEventListener('onload')
       -each card has unique id (id='card1' and so on)
      Randomly place cards (Math.random())
 
