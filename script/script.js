@@ -9,22 +9,28 @@ let currentPlayer = 0;
 
 //SCORE HANDLING//
 let bluePlayer = {
+  player: 'Blue Player',
   currentMatches: 0,
   gamesWon: 0
 }
 let redPlayer = {
+  player: 'Red Payer',
   currentMatches: 0,
   gamesWon: 0
 }
 
 function bluePlayerMatch() {
   bluePlayer.currentMatches += 1;
-  document.getElementById('blue_score').innerHTML = bluePlayer.currentMatches
+  document.getElementById('blue_score')
+    .innerHTML = bluePlayer.currentMatches;
+
+
 }
 
 function redPlayerMatch() {
   redPlayer.currentMatches += 1;
   document.getElementById('red_score').innerHTML = redPlayer.currentMatches;
+
 }
 
 function resetScores() {
@@ -39,6 +45,15 @@ function resetScores() {
   document.getElementById('red_score').innerHTML = 0;
   document.getElementById('red_gamesWon').innerHTML = 0;
 
+}
+
+function playerDisplay(currentPlayer) {
+  if (currentPlayer % 2 == 0) {
+    document.getElementById('playerDisplay').innerHTML = "Red Player's Turn"
+  }
+  else {
+    document.getElementById('playerDisplay').innerHTML = "Blue Player's Turn"
+  }
 }
 
 // Shuffle cardValues array  Durstenfeld shuffle
@@ -90,6 +105,7 @@ function flipCard(card, value) {
         cardsFlipped += 2;
         //switching players
         currentPlayer += 1;
+        playerDisplay(currentPlayer);
         //updates current matches for each player
         if (currentPlayer % 2 == 0) {
           bluePlayerMatch()
@@ -127,6 +143,8 @@ function flipCard(card, value) {
         function coverCards() {
           currentPlayer += 1;
           console.log('Current Player number: ' + currentPlayer)
+          playerDisplay(currentPlayer);
+
           var tile_1 = document.getElementById(cardIDs[0])
           var tile_2 = document.getElementById(cardIDs[1])
 
@@ -142,9 +160,12 @@ function flipCard(card, value) {
 
           cardFlipValues = [];
           cardIDs = [];
+
+
         }
         setTimeout(coverCards, 700)
       }
     }
   }
+
 }
