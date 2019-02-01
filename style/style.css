@@ -1,6 +1,7 @@
 
 body{
   font-family: Sans-serif;
+  display:flex;
 }
 .container {
   width:85%;
